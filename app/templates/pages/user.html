@@ -1,11 +1,16 @@
 {% extends 'layouts/base.html' %}
 
 {% block main %}
-<h1>User: {{ current_user.username }}</h1>
+<table>
+    <tr valign="top">
+        <td><img src="{{ current_user.avatar(128) }}"></td>
+        <td>
+            <h1>User: {{ current_user.username }}</h1>
+        </td>
+    </tr>
+</table>
 <hr>
 {% for post in posts %}
-<p>
-    You said: <b>{{ post.body }}</b>
-</p>
+{% include "blocs/_post.html" %}
 {% endfor %}
 {% endblock %}
