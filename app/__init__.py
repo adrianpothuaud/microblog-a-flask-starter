@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
@@ -15,6 +16,9 @@ db = SQLAlchemy(app)
 
 # Migrate instance
 migrate = Migrate(app, db)
+
+# Flask Login
+login = LoginManager(app)
 
 # Import at the bottom to resolve circular dependencies
 from app import routes, models
