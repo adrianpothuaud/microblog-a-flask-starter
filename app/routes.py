@@ -7,5 +7,5 @@ from app import app
 def index():
     # Mock User
     user = {"username": "adrian"}
-    # Return HTML String
+    # Renders a template
     return render_template("index.html", title="Home", user=user)
