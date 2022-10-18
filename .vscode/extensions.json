@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "wholroyd.jinja",
+        "ms-python.black-formatter",
+        "editorconfig.editorconfig",
+        "ms-python.python"
+    ]
+}
