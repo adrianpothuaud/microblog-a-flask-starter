@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 
-{% include 'blocs/shared/head.html' %}
+{% include 'blocs/head.html' %}
 
 <body>
-    {% include 'blocs/by_role/unauthenticated/header.html' %}
+    {% include 'blocs/header.html' %}
     <main>
         {% block main %}
         {% endblock %}
@@ -19,7 +19,7 @@
         {% endif %}
         {% endwith %}
     </main>
-    {% include 'blocs/by_role/unauthenticated/footer.html' %}
+    {% include 'blocs/footer.html' %}
 </body>
 
 </html>
