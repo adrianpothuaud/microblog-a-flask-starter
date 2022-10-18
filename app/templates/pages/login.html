@@ -9,10 +9,16 @@
     <fieldset>
         <label>{{ form.username.label }}</label>
         {{ form.username(size=32) }}
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
     </fieldset>
     <fieldset>
         <label>{{ form.password.label }}</label>
         {{ form.password(size=32) }}
+        {% for error in form.password.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
     </fieldset>
     <fieldset>
         {{ form.remember_me() }}

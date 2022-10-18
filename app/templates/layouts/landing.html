@@ -8,6 +8,16 @@
     <main>
         {% block main %}
         {% endblock %}
+        <hr />
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
     </main>
     {% include 'blocs/by_role/unauthenticated/footer.html' %}
 </body>
