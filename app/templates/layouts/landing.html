@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+
+{% include 'blocs/shared/head.html' %}
+
+<body>
+    {% include 'blocs/by_role/unauthenticated/header.html' %}
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    {% include 'blocs/by_role/unauthenticated/footer.html' %}
+</body>
+
+</html>

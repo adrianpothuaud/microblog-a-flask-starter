@@ -14,4 +14,4 @@ def index():
         {"author": {"username": brad["username"]}, "body": "The Avengers movie was so cool!"},
     ]
     # Renders a template
-    return render_template("index.html", posts=posts, title="Home", user=adrian)
+    return render_template("pages/index.html", posts=posts, title="Home", user=adrian)
