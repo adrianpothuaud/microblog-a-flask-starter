@@ -60,3 +60,14 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for("index"))
+
+
+@app.route("/users/<username>")
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    user_posts_mock = [
+        {"author": {"username": user.username}, "body": "A beautiful day in Portland!"},
+        {"author": {"username": user.username}, "body": "The Avengers movie was so cool!"},
+    ]
+    return render_template("pages/user.html", posts=user_posts_mock, user=user)
