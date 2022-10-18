@@ -19,6 +19,7 @@ migrate = Migrate(app, db)
 
 # Flask Login
 login_manager = LoginManager(app)
+login_manager.login_view = "login"
 
 # Import at the bottom to resolve circular dependencies
 from app import routes, models
