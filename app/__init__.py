@@ -18,7 +18,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # Flask Login
-login = LoginManager(app)
+login_manager = LoginManager(app)
 
 # Import at the bottom to resolve circular dependencies
 from app import routes, models
