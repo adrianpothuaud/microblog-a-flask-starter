@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "(Debug) Flask APP",
             "type": "python",
             "request": "launch",
             "module": "flask",
@@ -13,6 +13,20 @@
                 "run",
                 "--debugger",
                 "--reload"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "(PROD-like) Flask APP",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "microblog.py",
+            },
+            "args": [
+                "run",
             ],
             "jinja": true,
             "justMyCode": true
